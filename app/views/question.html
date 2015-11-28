@@ -3,10 +3,10 @@
    <div class="col-md-12">
   	<h2>All Questions</h2>
   		<div class="ques-list">
-  		<div class="question-container" ng-repeat="t in [1,2,3,4,5]" ui-sref="questionDetails({ questionId : 1})">
+  		<div class="question-container" ng-repeat="q in questions" ui-sref="questionDetails({ questionId : q.id})">
 			<div class="col-md-7 col-xs-7">
 				
-					<h3>Download file and display them in list in Android?</h3>
+					<h3>{{q.title}}</h3>
 					<div class="question-cat">
 	                <ul class="question-tags">
 	                    <li>
@@ -30,8 +30,8 @@
 			<div class="col-md-4 col-xs-4">
 				<ul class="question-statistic">
 					<li><span>99</span>views</li>
-					<li class='active'><span>2</span>answers</li>
-					<li><span>0</span>votes</li>
+					<li><span>{{q.ans_count || 0 }}</span>answers</li>
+					<li><span>{{q.vote_count || 0}}</span>votes</li>
 				</ul>
 			</div>
 		</div>

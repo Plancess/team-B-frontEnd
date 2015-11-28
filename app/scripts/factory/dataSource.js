@@ -19,6 +19,13 @@ angular.module('paqApp')
       	data.grant_type = "password";
       	return RestAPI.all('auth').all('token').post($.param(data), {},{'Content-Type': 'application/x-www-form-urlencoded'});
       },
+      askQuestion: function(data){
+        data.user = cookieStore.getUserId();
+        return RestAPI.all('post').post($.param(data), {},{'Content-Type': 'application/x-www-form-urlencoded'});
+      },
+      getQuestions: function(){
+        return RestAPI.one('post').get({});
+      },
       getUserData: function() {
         return RestAPI.one('users', userId).get({'format':'json'},{});
       },
