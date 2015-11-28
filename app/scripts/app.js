@@ -17,7 +17,9 @@ angular
     'ngSanitize',
     'ui.router',
     'restangular',
-    'ngTouch'
+    'ngTouch',
+    'ngTouch',
+    'ui.tinymce'
   ])
   .config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider',function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     $urlRouterProvider.otherwise('/');
@@ -46,6 +48,11 @@ angular
         url: '/question/:questionId',
         controller: 'QuestionDetailsCtrl',
         templateUrl: 'views/questionDetail.html'
+      })
+      .state('ask', {
+        url: '/ask',
+        controller: 'AskCtrl',
+        templateUrl: 'views/ask.html'
       });
 
       RestangularProvider.setBaseUrl("http://192.168.1.105:8080/");

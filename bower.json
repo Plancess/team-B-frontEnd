@@ -11,7 +11,8 @@
     "angular-sanitize": "^1.4.0",
     "angular-ui-router": "*",
     "angular-touch": "^1.4.0",
-    "restangular": "~1.5.1"
+    "restangular": "~1.5.1",
+    "angular-ui-tinymce": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
