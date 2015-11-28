@@ -19,7 +19,8 @@ angular
     'restangular',
     'ngTouch',
     'ngTouch',
-    'ui.tinymce'
+    'ui.tinymce',
+    'ngTagsInput'
   ])
   .config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider',function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     $urlRouterProvider.otherwise('/');
