@@ -21,13 +21,13 @@ angular.module('paqApp')
       },
       askQuestion: function(data){
         data.user = cookieStore.getUserId();
-        return RestAPI.all('post').post($.param(data), {},{'Content-Type': 'application/x-www-form-urlencoded'});
+        return RestAPI.all('question').post($.param(data), {},{'Content-Type': 'application/x-www-form-urlencoded'});
       },
       getQuestions: function(){
-        return RestAPI.one('post').get({});
+        return RestAPI.one('question').get({});
       },
       getQuestionDetails: function(questionId){
-        return RestAPI.one('post',questionId).get({});
+        return RestAPI.one('question',questionId).get({});
       },
       getUserData: function() {
         return RestAPI.one('users', userId).get({'format':'json'},{});

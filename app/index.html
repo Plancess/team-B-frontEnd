@@ -42,7 +42,8 @@
               <li class="active"><a ui-sref="home">Home</a></li>
               <li><a ui-sref="question">Questions</a></li>
               <li><a ui-sref="ask">Ask Question</a></li>
-              <li><a ui-sref="login">Login</a></li>
+              <li class="ng-hide" ng-show="isLogged"><a ui-sref="login" >Login</a></li>
+              <li class="ng-hide" ng-hide="isLogged"><a href="#" >Logout</a></li>
             </ul>
           </div>
         </div>

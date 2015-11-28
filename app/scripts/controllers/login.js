@@ -8,7 +8,7 @@
  * Controller of the paqApp
  */
 angular.module('paqApp')
-  .controller('LoginCtrl',function (DataSource, cookieStore, $state, $scope) {
+  .controller('LoginCtrl',function (DataSource, cookieStore, $state, $scope, $rootScope) {
 
   	if(cookieStore.getCookie()){
   		$state.go('question');
@@ -25,6 +25,7 @@ angular.module('paqApp')
 	  		DataSource.getUserIdData().then(function(res){
 	  			console.log("user data", res);
 	  			cookieStore.saveUserToCookie(res);
+	  			$rootScope.isLogged = true;
 	  			$state.go('question');
 	  		})
 	  	}, function(){
