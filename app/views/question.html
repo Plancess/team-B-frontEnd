@@ -1,14 +1,20 @@
-<div class="question-list">
-	<div class="question-container" ng-repeat="t in [1,2,3,4,5]" ui-sref="questionDetails({ questionId : 1})">
-		<div class="col-md-8 col-xs-8">
-			Download file and display them in list in Android?
+<div class="container">
+  <div class="row">
+   <div class="col-md-12">
+  	<h2>All Questions</h2>
+  		<div class="col-md-3 col-xs-3"></div>
+  		<div class="question-container" ng-repeat="t in [1,2,3,4,5]" ui-sref="questionDetails({ questionId : 1})">
+			<div class="col-md-6 col-xs-6">
+				Download file and display them in list in Android?
+			</div>
+			<div class="col-md-3 col-xs-3">
+				<ul class="question-statistic">
+					<li><span>99</span>views</li>
+					<li><span>2</span>answers</li>
+					<li><span>0</span>votes</li>
+				</ul>
+			</div>
 		</div>
-		<div class="col-md-4 col-xs-4">
-			<ul class="question-statistic">
-				<li><span>99</span>views</li>
-				<li><span>2</span>answers</li>
-				<li><span>0</span>votes</li>
-			</ul>
-		</div>
-	</div>
+   </div>
+  </div>
 </div>

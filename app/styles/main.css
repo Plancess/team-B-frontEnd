@@ -259,3 +259,17 @@ ul{
     border-bottom: 0;
   }
 }
+
+.header { margin-bottom: 0px;}
+.navbar{border-radius:0!important;}
+.intro-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../images/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.navbar{margin-bottom: 0px;}
+.panel-login {margin-bottom: 70px; margin-top: 70px}
+.question-list{margin-top: 70px}
