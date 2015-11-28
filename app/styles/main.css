@@ -296,6 +296,7 @@ ul.question-statistic {
 }
 ul.question-tags {
     display: inline-block;
+    padding-left: 0px;
 }
 ul.question-tags li {
     margin: 10px 5px 10px 0;
