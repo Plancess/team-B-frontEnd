@@ -8,10 +8,11 @@
  * Controller of the paqApp
  */
 angular.module('paqApp')
-  .controller('QuestionDetailsCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('QuestionDetailsCtrl', function ($stateParams, DataSource) {
+	console.log("questionid", $stateParams.questionId);
+	DataSource.getQuestionDetails($stateParams.questionId).then(function(res){
+		console.log("question details", res);
+	}, function(){
+		console.log("error while fetching question details");
+	});
   });

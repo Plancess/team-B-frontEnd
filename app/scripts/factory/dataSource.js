@@ -26,6 +26,9 @@ angular.module('paqApp')
       getQuestions: function(){
         return RestAPI.one('post').get({});
       },
+      getQuestionDetails: function(questionId){
+        return RestAPI.one('post',questionId).get({});
+      },
       getUserData: function() {
         return RestAPI.one('users', userId).get({'format':'json'},{});
       },

@@ -41,6 +41,10 @@ ul{
   display: inline-block;
   margin-left: 20px;
 }
+.question-container:hover{
+  background: #e6e6e6;
+  cursor: pointer;
+}
 
 .question-statistic li span{
   width: 40px;
@@ -51,7 +55,6 @@ ul{
 
 .question-container{
   padding: 30px 0;
-  height: 100px;
 }
 /***** question page end*****/
 

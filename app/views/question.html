@@ -3,8 +3,8 @@
    <div class="col-md-12">
   	<h2>All Questions</h2>
   		<div class="ques-list">
-  		<div class="question-container" ng-repeat="q in questions" ui-sref="questionDetails({ questionId : q.id})">
-			<div class="col-md-7 col-xs-7">
+  		<div class="question-container row" ng-repeat="q in questions" ui-sref="questionDetails({ questionId : q.id})">
+			<div class="col-md-9 col-xs-9">
 				
 					<h3>{{q.title}}</h3>
 					<div class="question-cat">
@@ -27,7 +27,7 @@
 	                    </ul>
 	                </div>
 			</div>
-			<div class="col-md-4 col-xs-4">
+			<div class="col-md-3 col-xs-3">
 				<ul class="question-statistic">
 					<li><span>99</span>views</li>
 					<li><span>{{q.ans_count || 0 }}</span>answers</li>
