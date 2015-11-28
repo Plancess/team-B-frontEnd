@@ -10,7 +10,8 @@
     "angular-route": "^1.4.0",
     "angular-sanitize": "^1.4.0",
     "angular-ui-router": "*",
-    "angular-touch": "^1.4.0"
+    "angular-touch": "^1.4.0",
+    "angular-ui-tinymce": "latest"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
@@ -22,7 +23,7 @@
       "main": [
         "less/bootstrap.less",
         "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
+        "dist/js/bootstrap.js",
       ]
     }
   }

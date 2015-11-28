@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ui.router',
-    'ngTouch'
+    'ngTouch',
+    'ui.tinymce'
   ])
   .config(['$stateProvider', '$urlRouterProvider',function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -45,5 +46,10 @@ angular
         url: '/question/:questionId',
         controller: 'QuestionDetailsCtrl',
         templateUrl: 'views/questionDetail.html'
+      })
+      .state('ask', {
+        url: '/ask',
+        controller: 'AskCtrl',
+        templateUrl: 'views/ask.html'
       });
   }]);
