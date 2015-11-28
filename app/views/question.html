@@ -1,13 +1,13 @@
 <div class="question-list">
-	<div class="question-container" ng-repeat="t in [1,2,3,4,5]" ui-sref="questionDetails({ questionId : 1})">
+	<div class="question-container" ng-repeat="q in questions" ui-sref="questionDetails({ questionId : q.id})">
 		<div class="col-md-8 col-xs-8">
-			Download file and display them in list in Android?
+			{{q.title}}
 		</div>
 		<div class="col-md-4 col-xs-4">
 			<ul class="question-statistic">
 				<li><span>99</span>views</li>
-				<li><span>2</span>answers</li>
-				<li><span>0</span>votes</li>
+				<li><span>{{q.ans_count || 0 }}</span>answers</li>
+				<li><span>{{q.vote_count || 0}}</span>votes</li>
 			</ul>
 		</div>
 	</div>

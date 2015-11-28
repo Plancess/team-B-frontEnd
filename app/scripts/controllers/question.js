@@ -8,12 +8,11 @@
  * Controller of the paqApp
  */
 angular.module('paqApp')
-  .controller('QuestionCtrl', function ($scope) {
-    $scope.question = {
-    	question: "Download file and display them in list in Android",
-    	question_id: 1,
-    	views: 999,
-    	answer_count: 2,
-    	question_vote_count: 0
-    }
+  .controller('QuestionCtrl', function ($scope, DataSource) {
+	DataSource.getQuestions().then(function(res){
+		console.log('questions', res);
+		$scope.questions = res;
+	}, function(){
+		console.log('error while fetching questions');
+	});
   });
