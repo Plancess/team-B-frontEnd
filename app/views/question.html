@@ -8,29 +8,17 @@
 				
 					<h3>{{q.title}}</h3>
 					<div class="question-cat">
-	                <ul class="question-tags">
-	                    <li>
-	                        <a class="q-tag" href="#">apps</a>
-	                    </li>
-	                    <li>
-	                        <a class="q-tag" href="">business</a>
-	                    </li>
-	                    <li>
-	                        <a class="q-tag" href="">glass</a>
-	                    </li>
-	                    <li>
-	                        <a class="q-tag" href="">google</a>
-	                    </li>
-	                        <li>
-	                        <a class="q-tag" href="">technology</a>
-	                    </li>
+		                <ul class="question-tags">
+		                    <li ng-repeat="t in q.tags">
+		                        <a class="q-tag" href="#">{{t.title}}</a>
+		                    </li>
 	                    </ul>
 	                </div>
 			</div>
 			<div class="col-md-3 col-xs-3">
 				<ul class="question-statistic">
-					<li><span>99</span>views</li>
-					<li><span>{{q.ans_count || 0 }}</span>answers</li>
+					<li><span>{{q.view_count}}</span>views</li>
+					<li><span>{{q.answers.length}}</span>answers</li>
 					<li><span>{{q.vote_count || 0}}</span>votes</li>
 				</ul>
 			</div>

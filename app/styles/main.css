@@ -62,8 +62,14 @@ ul{
 .question-details{
   margin-bottom: 50px;
 }
+
+.question-details.guru-answer{
+  background-color: #ebf3f9;
+}
+
 .post-text{
   margin-bottom: 10px;
+  min-height: 100px;
 }
 .post-tag{
   color: #3e6d8e;
@@ -107,6 +113,9 @@ ul{
   width: 700px;
   margin-bottom: 10px;
   border-bottom: 1px solid #f0f0f0;
+}
+.comment-box textarea{
+  width: 100%;
 }
 /***** question details end *****/
 

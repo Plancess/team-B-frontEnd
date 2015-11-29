@@ -23,7 +23,6 @@ angular.module('paqApp')
     },
     clearCookie: function () {
       $cookies.remove('paqCookie',{path:'/'});
-      $cookies.remove('paqCookie',{path:'/app'});
     },
     getCookie: function () {
       return $cookies.getObject('paqCookie',  {path:'/'});

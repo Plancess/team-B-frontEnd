@@ -44,8 +44,8 @@
               <li class="active"><a ui-sref="home">Home</a></li>
               <li><a ui-sref="question">Questions</a></li>
               <li><a ui-sref="ask">Ask Question</a></li>
-              <li class="ng-hide" ng-show="isLogged"><a ui-sref="login" >Login</a></li>
-              <li class="ng-hide" ng-hide="isLogged"><a href="#" >Logout</a></li>
+              <li class="ng-hide" ng-hide="isLogged"><a ui-sref="login" >Login</a></li>
+              <li class="ng-hide" ng-show="isLogged"><a href="#" >Logout</a></li>
             </ul>
           </div>
         </div>
@@ -75,6 +75,8 @@
     <script src="bower_components/tinymce-dist/tinymce.min.js"></script>
     <script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
     <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -87,6 +89,7 @@
         <script src="scripts/controllers/question.js"></script>
         <script src="scripts/controllers/register.js"></script>
         <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/logout.js"></script>
         <script src="scripts/controllers/questionDetails.js"></script>
         <script src="scripts/controllers/ask.js"></script>
         <!-- endbuild -->

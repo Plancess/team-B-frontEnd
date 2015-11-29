@@ -6,8 +6,8 @@ angular.module('paqApp')
        */
   .factory('DataSource', function($http, cookieStore, RestAPI) {
     var userId = cookieStore.getUserId();
-    var client_id = "cowkBqV9OgZzuIZUpD28J649QVb3dAsWnBXUTfUd";
-    var client_secret = "3zvNr5XKVfsBESBjuC15dZdrxqzIheifpKF3hiEAXnoxTfGQYKyr9gH4hzsxYDbKQyZeMjwfE1WmmdjaO9NAJlfJpZD21aT0QkhnX7mqy83uymTN1Yn9X8nXDnzaR8EC";
+    var client_id = "7lN5yUnfHP2kOgQbTN0CgFM9BhO65QXhgmzvvuo1";
+    var client_secret = "n8KfS0ud6qqcCL4E0WE9WQK4qAP0BHep1AJ7074BdwXBCERU6bv1Y6lDPMtkTNJ2XOmV5CzTWngtrQCAWUXWe2KZQqXAH6nninJ6fgR47DgAKKVr3jfOHq34gSD9m22L";
 
     return {
       register: function(data){
@@ -28,6 +28,18 @@ angular.module('paqApp')
       },
       getQuestionDetails: function(questionId){
         return RestAPI.one('question',questionId).get({});
+      },
+      postAnswer: function(data){
+        return RestAPI.all('answer').post($.param(data), {},{'Content-Type': 'application/x-www-form-urlencoded'});
+      },
+      postComment: function(data){
+        return RestAPI.all('comment').post($.param(data), {},{'Content-Type': 'application/x-www-form-urlencoded'});
+      },
+      postVote: function(data){
+        return RestAPI.all('vote').post($.param(data), {},{'Content-Type': 'application/x-www-form-urlencoded'});
+      },
+      getAllTags: function(){
+        return RestAPI.one('tags').get({});
       },
       getUserData: function() {
         return RestAPI.one('users', userId).get({'format':'json'},{});

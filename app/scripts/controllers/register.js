@@ -20,8 +20,8 @@ angular.module('paqApp')
   			var data = {
 		  		"username": $scope.username,
 		  		"email": $scope.email,
-		  		"first_name": $scope.name,
-				"password": $scope.password
+		  		"first_name": $scope.username,
+				  "password": $scope.password
 	  		};
   			DataSource.register(data).then(function(res){
   				login();

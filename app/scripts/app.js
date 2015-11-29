@@ -20,7 +20,8 @@ angular
     'ngTouch',
     'ngTouch',
     'ui.tinymce',
-    'ngTagsInput'
+    'ngTagsInput',
+    'angularMoment'
   ])
   .config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider',function ($stateProvider, $urlRouterProvider, RestangularProvider) {
     $urlRouterProvider.otherwise('/');
@@ -40,6 +41,11 @@ angular
         controller: 'LoginCtrl',
         templateUrl: 'views/login.html'
       })
+      .state('logout', {
+        url: '/logout',
+        controller: 'LogoutCtrl',
+        templateUrl: 'views/main.html'
+      })
       .state('question', {
         url: '/question',
         controller: 'QuestionCtrl',
@@ -57,4 +63,13 @@ angular
       });
 
       RestangularProvider.setBaseUrl("http://192.168.1.105:8080/");
-  }]);
+  }])
+
+  .run(function (cookieStore, $rootScope) {
+        if(cookieStore.getCookie){
+          $rootScope.isLogged = true;
+        } else{
+          $rootScope.isLogged = false;
+        }
+    });
+;
